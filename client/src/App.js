@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  state={response:{}}
+  state={response:[]}
   render(){
     return (
       <div className="App">
@@ -20,8 +20,14 @@ class App extends Component {
    testBackend = async =>{
     axios.get('/message').then(response=>{
       console.log(response)
-     this.setState({response:response})
-    })
+      if(response.status===200){
+        this.setState({response:response})
+      }
+     
+    }).catch(function (error) {
+      console.log(error);
+    });
+    
   }
 }
 
