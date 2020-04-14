@@ -16,9 +16,7 @@ app.get("/message", (req, res) => {
 app.get("/getQuestionaire", (req, res) => {
   console.log(req.query["ID"]);
   let recievedID = req.query["ID"];
-  res.send(
-    "backend recieved request to provide questionaire with id: " + recievedID
-  );
+  res.send("Recieved request to provide questionaire with id: " + recievedID);
 });
 
 //server start
