@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import Homescreen from "./homescreen/homescreen"
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,6 +13,7 @@ class App extends Component {
         <button onClick={() => this.testBackend()}>Click</button>
         <h3>Message:</h3>
         <h2>{this.state.response.data}</h2>
+        <Homescreen/>
       </div>
     );
   }
