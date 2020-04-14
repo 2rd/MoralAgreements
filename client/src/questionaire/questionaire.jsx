@@ -10,6 +10,13 @@ class Questionaire extends Component {
     this.fetchQuestionaire();
   }
   render() {
+    if (this.state.isLoading) {
+      return (
+        <div className="questionaire-wrapper">
+          <Loading />
+        </div>
+      );
+    }
     return (
       <div className="questionaire-wrapper">
         <div>
@@ -30,9 +37,14 @@ class Questionaire extends Component {
   fetchQuestionaire = (async) => {
     let id = this.state.id;
     axios
-      .post("/getQuestionaire", id)
+      .get("/getQuestionaire", {
+        params: {
+          ID: 123,
+        },
+      })
       .then((response) => {
         console.log(response);
+        this.setState({ isLoading: false });
       })
       .catch(function (error) {
         console.log(error);
