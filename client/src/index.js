@@ -1,16 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 import Creategame from "./creategame/creategame.jsx";
 import Homescreen from "./homescreen/homescreen.jsx";
 import Questionaire from "./questionaire/questionaire.jsx";
 import Summary from "./summary/summary.jsx";
-import App from './App';
+import App from "./App";
 import { HashRouter, Route } from "react-router-dom";
-import * as serviceWorker from './serviceWorker';
-
-
-
+import * as serviceWorker from "./serviceWorker";
+import InputPin from "./questionaire/inputpin/inputpin";
 
 const routing = (
   <HashRouter>
@@ -19,6 +17,7 @@ const routing = (
       <Route exact path="/" component={Homescreen} />
       <Route path="/create" component={Creategame} />
       <Route path="/summary" component={Summary} />
+      <Route path="/inputpin" component={InputPin} />
       <Route path="/questionaire/:id" component={Questionaire} />
     </div>
   </HashRouter>
