@@ -7,46 +7,8 @@ class Questionaire extends Component {
   state = {
     id: "",
     isLoading: true,
-    questionaire: {
-      id: "0001",
-      title: "Corona Dilemmas",
-      description:
-        "infectious disease outbreaks are frequently characterized by scientific uncertainty, social and institutional disruption, and an overall climate of fear and distrust. policy makers and public health professionals may be forced to weigh and prioritize potentially competing ethical values in the face of severe time and resource constraints. ",
-      questions: [
-        {
-          text:
-            "a 16-year-old boy with diabetes and a 75-year-old grandfather are in a hospital and struggling to breathe. the hospital only has one ventilator left.",
-          img: "https://picsum.photos/200/300",
-          question: "who gets the ventilator?",
-          option_1: "the boy",
-          option_2: "the grandfather",
-        },
-        {
-          text:
-            "a 16-year-old boy with diabetes and a 75-year-old grandfather are in a hospital and struggling to breathe. the hospital only has one ventilator left.",
-          img: "https://picsum.photos/200/300",
-          question: "who gets the ventilator?",
-          option_1: "the boy",
-          option_2: "the grandfather",
-        },
-        {
-          text:
-            "a 16-year-old boy with diabetes and a 75-year-old grandfather are in a hospital and struggling to breathe. the hospital only has one ventilator left.",
-          img: "https://picsum.photos/200/300",
-          question: "who gets the ventilator?",
-          option_1: "the boy",
-          option_2: "the grandfather",
-        },
-      ],
-    },
-    currentQuestion: {
-      img: "https://picsum.photos/200/300",
-      text:
-        "a 16-year-old boy with diabetes and a 75-year-old grandfather are in a hospital and struggling to breathe. the hospital only has one ventilator left.",
-      question: "who gets the ventilator?",
-      option_1: "the 16-year-old boy",
-      option_2: "the 75-year-old grandfather",
-    },
+    questionaire: {},
+    currentQuestion: {},
   };
   async componentDidMount() {
     await this.setState({ id: this.props.match.params["id"] });
@@ -99,7 +61,19 @@ class Questionaire extends Component {
       })
       .then((response) => {
         console.log(response);
-        this.setState({ isLoading: false });
+        let questionaire = response.data[0];
+        if (questionaire) {
+          this.setState({
+            isLoading: false,
+            questionaire: questionaire,
+            currentQuestion: questionaire["questions"][0],
+          });
+        } else {
+          this.setState({
+            isLoading: false,
+            questionaire: { title: "Not found.." },
+          });
+        }
       })
       .catch(function (error) {
         console.log(error);
