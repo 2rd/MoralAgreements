@@ -15,15 +15,11 @@ class InputPin extends Component {
           style={{ padding: "10px" }}
           inputStyle={{ borderColor: "gray" }}
           inputFocusStyle={{ borderColor: "red" }}
-          onComplete={(value, index) => this.redirect(value)}
+          onComplete={(value, index) => this.props.redir(value)}
         />
       </div>
     );
   }
-
-  redirect = (value) => {
-    this.props.history.push("/questionaire/" + value);
-  };
 }
 
 export default InputPin;

@@ -1,0 +1,92 @@
+{
+  "_id": { "$oid": "5e9636f71c9d44000099acf2" },
+  "id": "0001",
+  "title": "Corona Dilemmas",
+  "description": "Infectious disease outbreaks are frequently characterized by scientific uncertainty, social and institutional disruption, and an overall climate of fear and distrust. Public health professionals may be forced to weigh and prioritize potentially competing ethical values in the face of severe time and resource constraints. We would like to know what you would do if you were one of them to decide about life or death.",
+  "questions": [
+    {
+      "text": "A 17 year old boy and a 53 year old mother are brought to a hospital. They both require a ventilator and would die if they don’t receive immediate intensive care. There’s only one more ventilator available at the hospital.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator?",
+      "option_1": "The 17-year old boy",
+      "option_2": "His 53-year old mother"
+    },
+    {
+      "text": "We still consider the example of the 17-year-old boy and his 53-year old mother. But now you receive the additional information that the mother is running an orphanage for 20 children. Without her the home would get closed.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator now?",
+      "option_1": "The 17-year old boy",
+      "option_2": "His 53-year old mother"
+    },
+    {
+      "text": "We still consider the example of the 17-year-old boy and his 53-year old mother who’s running an orphanage. As his attending physician you know that the boy is a registered organ donor and if he dies, his organs could save the life of two other patients. ",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator now?",
+      "option_1": "The 17-year old boy",
+      "option_2": "His 53-year old mother"
+    },
+    {
+      "text": "We still consider the example of the 17-year-old boy who is an organ donor, and his 53-year old mother who’s running an orphanage. This time, you are also aware of the fact that the boy has a severe chronic disease and is not expected to live past the age of 30.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator now?",
+      "option_1": "The 17-year old boy",
+      "option_2": "His 53-year old mother"
+    },
+    {
+      "text": "Two corona patients at the hospital have difficulties breathing and require a ventilator immediately, but there’s only one ventilator available. It is known that patient A infected himself on a huge birthday party that had been illegal under the ban of gatherings of two or more people. Patient B got infected during his work at the local supermarket.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator?",
+      "option_1": "Patient A",
+      "option_2": "Patient B"
+    },
+    {
+      "text": "A pair of twins – a girl and a boy – arrive at the hospital with serious Covid-19 symptoms. Both are the same age, and both have no previous diseases. They both require a ventilator and would die if they don’t receive immediate intensive care. There’s only one more ventilator available at the hospital.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator?",
+      "option_1": "The girl",
+      "option_2": "The boy"
+    },
+    {
+      "text": "This time the choice is between a 75-year old man and a 16-year old boy, who both require a ventilator to survive. There’s only one more ventilator available at the hospital.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator?",
+      "option_1": "The 75-year old man",
+      "option_2": "The 16-year old boy"
+    },
+    {
+      "text": "We still consider the example of the 76-year old man and the 9-year old boy, but in this scenario the doctor estimates a survival chance of 90% for the boy, and only 60% for the elderly man. There’s still only one more ventilator available at the hospital.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator?",
+      "option_1": "The 75-year old man",
+      "option_2": "The 16-year old boy"
+    },
+    {
+      "text": "We still consider the example of the 75-year old man and the 16-year old boy with a 90% survival chance for the boy and a 60% chance for the elderly man. But this time, the doctor states a 30% chance for the boy to survive even without the ventilator. The elderly man would die immediately.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the ventilator?",
+      "option_1": "The 75-year old man",
+      "option_2": "The 15-year old boy"
+    },
+    {
+      "text": "A 95-year old woman receives intensive care with a ventilator, but the doctor states only a 10% chance for her to survive. A 12-year old girl with an expected survival chance of 95% arrives at the hospital and requires a ventilator immediately, but there is no free ventilator available",
+      "img": "https://picsum.photos/300/200",
+      "question": "Should the ventilator be taken from the 95-year old woman and given to the 12-year old girl?",
+      "option_1": "Yes",
+      "option_2": "No"
+    },
+    {
+      "text": "Two men of the same age arrive at the hospital and both require a ventilator immediately in order to survive. Based on the medical history, a doctor estimates that man A would need the ventilator for 10 days, man B only for 5 days.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the remaining ventilator?",
+      "option_1": "Man A who needs it for 10 days",
+      "option_2": "Man B who needs it for 5 days"
+    },
+    {
+      "text": "A 66-year old woman who’s been smoking for 50 years and a 4-year old girl with Asthma arrive at the hospital, both require a ventilator immediately in order to survive. Both are expected to have the same survival chance according to a doctor.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Who should receive the remaining ventilator?",
+      "option_1": "The 66-year old woman who smokes",
+      "option_2": "The 4-year old girl with Asthma"
+    }
+  ]
+}

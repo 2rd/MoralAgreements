@@ -3,6 +3,9 @@ import "./summary.css";
 import PlaceholdeNav from "../nav/nav";
 class Summary extends Component {
   state = {};
+  componentDidMount = () => {
+    console.log(this.props.history.location.state);
+  };
   render() {
     return (
       <div>

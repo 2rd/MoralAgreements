@@ -10,8 +10,6 @@ class PlaceholdeNav extends Component {
         <div className="link-wrapper">
           <Link to="/">Home</Link>
           <br />
-          <Link to="/inputpin">Questionaire</Link>
-          <br />
           <Link to="/create">Create Questionaire</Link>
           <br />
           <Link to="/summary">Summary</Link>

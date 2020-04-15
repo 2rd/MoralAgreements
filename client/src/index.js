@@ -8,7 +8,6 @@ import Summary from "./summary/summary.jsx";
 import App from "./App";
 import { HashRouter, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
-import InputPin from "./questionaire/inputpin/inputpin";
 
 const routing = (
   <HashRouter>
@@ -17,7 +16,6 @@ const routing = (
       <Route exact path="/" component={Homescreen} />
       <Route path="/create" component={Creategame} />
       <Route path="/summary" component={Summary} />
-      <Route path="/inputpin" component={InputPin} />
       <Route path="/questionaire/:id" component={Questionaire} />
     </div>
   </HashRouter>
