@@ -7,7 +7,7 @@ class PlaceholdeNav extends Component {
     return (
       <div className="placeholder-box">
         <p>This is just a navigation to use while developing</p>
-        <div>
+        <div className="link-wrapper">
           <Link to="/">Home</Link>
           <br />
           <Link to="/inputpin">Questionaire</Link>

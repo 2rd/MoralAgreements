@@ -6,10 +6,17 @@
   "questions": [
     {
       "text": "a 16-year-old boy with diabetes and a 75-year-old grandfather are in a hospital and struggling to breathe. the hospital only has one ventilator left.",
-      "img": "https://picsum.photos/200/300",
+      "img": "https://picsum.photos/300/200",
       "question": "who gets the ventilator?",
       "option_1": "the boy",
       "option_2": "the grandfather"
+    },
+    {
+      "text": "abcabca",
+      "img": "https://picsum.photos/300/200",
+      "question": "who should x?",
+      "option_1": "the y",
+      "option_2": "the z"
     }
   ]
 }

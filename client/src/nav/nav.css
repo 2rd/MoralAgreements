@@ -1,3 +1,28 @@
 .placeholder-box {
   border: 1px solid black;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.link-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.link-wrapper a {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(139, 139, 139);
+}
+a:visited {
+  color: rgb(139, 139, 139);
+}
+
+a:hover {
+  color: black;
 }

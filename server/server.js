@@ -27,7 +27,7 @@ async function listDatabases(client) {
   console.log("Databases:");
   databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
 }
-async function listAllDocumentsInCollection(client, id) {
+async function findCollectionById(client, id) {
   let query = { id: id };
   documents = await client
     .db("moral_agreements")
@@ -46,7 +46,7 @@ app.get("/getQuestionaire", async (req, res) => {
   console.log(req.query["ID"]);
   let recievedID = req.query["ID"];
 
-  let questionaires = await listAllDocumentsInCollection(client, recievedID);
+  let questionaires = await findCollectionById(client, recievedID);
   console.log(questionaires);
   res.send(questionaires);
 });

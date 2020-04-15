@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Loading from "./loading/loading";
 import PlaceholderNav from "../nav/nav";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./questionaire.css";
 class Questionaire extends Component {
@@ -22,7 +23,12 @@ class Questionaire extends Component {
         </div>
       );
     }
-    return (
+    return this.state.notFound ? (
+      <div className="questionaire-wrapper">
+        <h1>Not found..</h1>
+        <Link to="/">Back</Link>
+      </div>
+    ) : (
       <div className="questionaire-wrapper">
         <div className="section">
           <h1 className="questionaire-title">
@@ -31,6 +37,11 @@ class Questionaire extends Component {
           <p className="questionaire-id">id: {this.state.questionaire.id}</p>
         </div>
         <div className="question-section section">
+          {this.state.currentQuestion.img ? (
+            <img src={this.state.currentQuestion.img} />
+          ) : (
+            ""
+          )}
           <p>{this.state.currentQuestion.text}</p>
         </div>
         <div className="button-section section">
@@ -45,6 +56,7 @@ class Questionaire extends Component {
               </button>
             </div>
             <button className="flip-btn btn">flip a coin</button>
+            <Link to="/">Back</Link>
           </div>
         </div>
       </div>
@@ -71,6 +83,7 @@ class Questionaire extends Component {
         } else {
           this.setState({
             isLoading: false,
+            notFound: true,
             questionaire: { title: "Not found.." },
           });
         }
