@@ -1,0 +1,54 @@
+::-webkit-input-placeholder {
+    text-align: center;
+    font-size: large;
+}
+.b1{
+    margin: auto;
+    width: 26%;
+    background: solid whitesmoke;
+    border: 1px solid rgb(184, 184, 184);
+    padding: 10px;
+  }
+
+.b2 {
+    margin: auto;
+    width: 26%;
+    border: 1px solid rgb(184, 184, 184);
+    padding: 10px;
+  }
+.b3 {
+    margin: auto;
+    position: relative;
+    width: 11.5%;
+    bottom: -10px;
+    left: -103px;
+    border: 1px solid rgb(184, 184, 184);
+    padding: 10px;
+  }
+.b4 {
+    margin: auto;
+    position: relative;
+    bottom: 86px;
+    left: 100px;
+    width: 11.5%;
+    border: 1px solid rgb(184, 184, 184);
+    padding: 10px;
+    
+  }
+  .button1{
+    border: none;
+    background-color: inherit;
+    padding: 5px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+.button2{
+    border: none;
+    background-color: inherit;
+    padding: 5px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+
+}
