@@ -30,3 +30,4 @@ class Textb extends Component {
     );
     }
  }
+ export default Textb;
