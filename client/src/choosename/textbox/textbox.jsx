@@ -1,7 +1,9 @@
 import React from "react";
 import "./textbox.css";
-
-const TextInput = props => {
+class Textb extends Component {
+//const TextInput = props => {
+  state = {};
+  render() {  
     return (
         <div>
         <div class="h1">
@@ -25,5 +27,6 @@ const TextInput = props => {
              <button type="button">kan godt flytte meg og</button>
        </div>
      </div>
-   );
- };
+    );
+    }
+ }

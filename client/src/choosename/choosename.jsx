@@ -7,7 +7,6 @@ class ChooseName extends Component {
     return (
       <div>
         <h1>Create Game</h1>
-        <boxwithtext/>
       </div>
     );
   }
