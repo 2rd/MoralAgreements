@@ -39,6 +39,7 @@ class Questionaire extends Component {
     return !this.state.started ? (
       <div className="questionaire-wrapper">
         <div>
+          <h1>{this.state.questionaire.title}</h1>
           <p>{this.state.questionaire.description}</p>
           <button
             onClick={() => {
