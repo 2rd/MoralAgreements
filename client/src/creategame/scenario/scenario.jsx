@@ -23,11 +23,9 @@ class Scenario extends Component {
                     <textarea rows="4" cols="21" name="comment" form="usrform" align="right" placeholder="Type option B">
                     </textarea>
                 </div>
-                <div class="button1">
-                    <button type="button">Back</button>
-                </div>
-                <div class="button2">
-                    <button type="button">Next</button>
+                <div class="wrap">
+                    <button class="unstyled-button">Back</button>
+                    <button class="button">Next</button>
                 </div>
             </div>
         );
