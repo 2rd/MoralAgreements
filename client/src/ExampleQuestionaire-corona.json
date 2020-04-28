@@ -5,88 +5,78 @@
   "description": "Infectious disease outbreaks are frequently characterized by scientific uncertainty, social and institutional disruption, and an overall climate of fear and distrust. Public health professionals may be forced to weigh and prioritize potentially competing ethical values in the face of severe time and resource constraints. We would like to know what you would do if you were one of them to decide about life or death.",
   "questions": [
     {
-      "text": "A 17 year old boy and a 53 year old mother are brought to a hospital. They both require a ventilator and would die if they don’t receive immediate intensive care. There’s only one more ventilator available at the hospital.",
+      "text": "You and your 27-year-old daughter have been tested positive with the Covid-19 virus. Suddenly both of you experience difficulties breathing. According to the doctor, both of you would die without an immediate ventilator treatment. Unfortunately there's only one ventilator left at the hospital.",
       "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator?",
-      "option_1": "The 17-year old boy",
-      "option_2": "His 53-year old mother"
+      "question": "Who do you want to receive the ventilator?",
+      "option_1": "You",
+      "option_2": "Your 27-year-old daughter",
+      "option_3": "Flip a coin"
     },
     {
-      "text": "We still consider the example of the 17-year-old boy and his 53-year old mother. But now you receive the additional information that the mother is running an orphanage for 20 children. Without her the home would get closed.",
+      "text": "A 75-year old man and a 16-year old boy both require a ventilator urgently. If they receive one immediately, doctors estimate a survival chance of 90% for the boy; 60% for the elderly man. The chances to survive without a ventilator are 30% for the boy and 0% for the elderly man who would would die immediately. You are the head of the hospital and you know that there's only one ventilator left.",
       "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator now?",
-      "option_1": "The 17-year old boy",
-      "option_2": "His 53-year old mother"
-    },
-    {
-      "text": "We still consider the example of the 17-year-old boy and his 53-year old mother who’s running an orphanage. As his attending physician you know that the boy is a registered organ donor and if he dies, his organs could save the life of two other patients. ",
-      "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator now?",
-      "option_1": "The 17-year old boy",
-      "option_2": "His 53-year old mother"
-    },
-    {
-      "text": "We still consider the example of the 17-year-old boy who is an organ donor, and his 53-year old mother who’s running an orphanage. This time, you are also aware of the fact that the boy has a severe chronic disease and is not expected to live past the age of 30.",
-      "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator now?",
-      "option_1": "The 17-year old boy",
-      "option_2": "His 53-year old mother"
-    },
-    {
-      "text": "Two corona patients at the hospital have difficulties breathing and require a ventilator immediately, but there’s only one ventilator available. It is known that patient A infected himself on a huge birthday party that had been illegal under the ban of gatherings of two or more people. Patient B got infected during his work at the local supermarket.",
-      "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator?",
-      "option_1": "Patient A",
-      "option_2": "Patient B"
-    },
-    {
-      "text": "A pair of twins – a girl and a boy – arrive at the hospital with serious Covid-19 symptoms. Both are the same age, and both have no previous diseases. They both require a ventilator and would die if they don’t receive immediate intensive care. There’s only one more ventilator available at the hospital.",
-      "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator?",
-      "option_1": "The girl",
-      "option_2": "The boy"
-    },
-    {
-      "text": "This time the choice is between a 75-year old man and a 16-year old boy, who both require a ventilator to survive. There’s only one more ventilator available at the hospital.",
-      "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator?",
+      "question": "Who receives the last ventilator?",
       "option_1": "The 75-year old man",
-      "option_2": "The 16-year old boy"
+      "option_2": "The 15-year old boy",
+      "option_3": "Flip a coin"
     },
     {
-      "text": "We still consider the example of the 76-year old man and the 9-year old boy, but in this scenario the doctor estimates a survival chance of 90% for the boy, and only 60% for the elderly man. There’s still only one more ventilator available at the hospital.",
+      "text": "You and your friend David both experience a very serious Covid-19 infection and both of you need a ventilator immediately in order to survive. Because the hospital has only one ventilator left, they can only save one of you. Unlike David, you are a registered organ donor. If he receives the ventilator and you die, your organs would save two other patients who would have died otherwise.",
       "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator?",
-      "option_1": "The 75-year old man",
-      "option_2": "The 16-year old boy"
+      "question": "You decide. Who gets the ventilator?",
+      "option_1": "You",
+      "option_2": "Your friend David",
+      "option_3": "Flip a coin"
     },
     {
-      "text": "We still consider the example of the 75-year old man and the 16-year old boy with a 90% survival chance for the boy and a 60% chance for the elderly man. But this time, the doctor states a 30% chance for the boy to survive even without the ventilator. The elderly man would die immediately.",
+      "text": "A 95-year old woman at a hospital receives intensive care with a ventilator, but as her attending physician you know that her chance to survive is very small. Suddenly, a 12-year old girl with asthma arrives at the hospital. Without a ventilator she would die, but unfortunately there's no other ventilator available. ",
       "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the ventilator?",
-      "option_1": "The 75-year old man",
-      "option_2": "The 15-year old boy"
-    },
-    {
-      "text": "A 95-year old woman receives intensive care with a ventilator, but the doctor states only a 10% chance for her to survive. A 12-year old girl with an expected survival chance of 95% arrives at the hospital and requires a ventilator immediately, but there is no free ventilator available",
-      "img": "https://picsum.photos/300/200",
-      "question": "Should the ventilator be taken from the 95-year old woman and given to the 12-year old girl?",
+      "question": "Do you take the ventilator from the 95-year old woman and give it to the 12-year old girl?",
       "option_1": "Yes",
       "option_2": "No"
     },
     {
-      "text": "Two men of the same age arrive at the hospital and both require a ventilator immediately in order to survive. Based on the medical history, a doctor estimates that man A would need the ventilator for 10 days, man B only for 5 days.",
+      "text": "Your father and another man of approximately the same age arrive simultaneously at the hospital with a serious Covid-19 infection. Both require a ventilator immediately to survive. Based on medical history, a doctor estimates that your father needs 10 days of artificial respiration to fully recover, while the other man would need the ventilator only for 5 days. ",
       "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the remaining ventilator?",
-      "option_1": "Man A who needs it for 10 days",
-      "option_2": "Man B who needs it for 5 days"
+      "question": "Who should receive the ventilator?",
+      "option_1": "Your father who needs it for 10 days",
+      "option_2": "The other man who needs it for 5 days",
+      "option_3": "Flip a coin"
     },
     {
-      "text": "A 66-year old woman who’s been smoking for 50 years and a 4-year old girl with Asthma arrive at the hospital, both require a ventilator immediately in order to survive. Both are expected to have the same survival chance according to a doctor.",
+      "text": "The society is in a lockdown and as a member of the national parliament you need to vote whether schools should open again. On the one hand, lifting restrictions may increase the spread of the disease and result in a higher death toll. On the other hand, children experiencing domestic violence are more vulnerable than before and the risk of child rapes increased. ",
       "img": "https://picsum.photos/300/200",
-      "question": "Who should receive the remaining ventilator?",
-      "option_1": "The 66-year old woman who smokes",
-      "option_2": "The 4-year old girl with Asthma"
+      "question": "What do you vote for?",
+      "option_1": "Keep schools closed",
+      "option_2": "Open schools"
+    },
+    {
+      "text": "Showing that a vaccine works is typically done through a large study, in which thousands of people receive either a vaccine or a placebo, while researchers keep track of how many get infected naturally. Such a study usually takes multiple months. A faster alternative is to infect healthy people in order to check whether those vaccinated don’t develop any symptoms.",
+      "img": "https://picsum.photos/300/200",
+      "question": "As a scientist working on a vaccine, would you infect healthy volunteers?",
+      "option_1": "Yes",
+      "option_2": "No"
+    },
+    {
+      "text": "Mobile apps using tracking information for infection control could help to slow down the spread of an epidemic and thereby save thousands of lives. They are meant only for the time of emergency, but they share similarities with surveillance systems of authoritarian states and always pose a risk of being misused for other purposes. ",
+      "img": "https://picsum.photos/300/200",
+      "question": "As a normal citizen, do you want politicians to enforce the use of such an app?",
+      "option_1": "Yes",
+      "option_2": "No"
+    },
+    {
+      "text": "A vaccine for Covid-19 has been developed, but the supplies are still low. You are in charge of the distribution of the vaccines. In order to save as many lives as possible, a consulting doctor suggests to exclude people with other life-threatening conditions who are expected to die very soon regardless of the vaccine.",
+      "img": "https://picsum.photos/300/200",
+      "question": "Would you follow the suggestion and exclude those patients? ",
+      "option_1": "Yes",
+      "option_2": "No"
+    },
+    {
+      "text": "Tonight will be the prom of your girl-/boyfriend and you have promised to be there. Just before you  leave the house, you receive the information that your brother - who lives in the same household like you - was tested positive on Covid-19. Although you don't show any symptoms, you are advised to self-quarantine yourself for 14 days. The prom itself is a public event with 200 people and legally permitted by the authorities.",
+      "img": "https://picsum.photos/300/200",
+      "question": "What do you do?",
+      "option_1": "Still go to the prom",
+      "option_2": "Stay home"
     }
   ]
 }
