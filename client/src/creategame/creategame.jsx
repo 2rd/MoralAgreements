@@ -3,12 +3,18 @@ import PlaceholderNav from "../nav/nav";
 import Testy from "./newgame/newgame";
 import Scenario from "./scenario/scenario";
 import "./creategame.css";
+import ChooseName from "../choosename/choosename";
 
 class Creategame extends Component {
   state = { started: false };
   render() {
     if (!this.state.started) {
-      return <button onClick={() => this.started()}>Start</button>;
+      return (
+        <div>
+          <ChooseName/>
+          <button onClick={() => this.started()}>Next</button>;
+        </div>
+      )
     }
     return (
       <div class="Hoved">
