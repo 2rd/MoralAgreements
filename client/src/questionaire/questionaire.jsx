@@ -74,18 +74,18 @@ class Questionaire extends Component {
               <button
                 className="option-btn option-btn-1 btn"
                 onClick={() =>
-                  this.nextQuestion(this.state.currentQuestion.option_1)
+                  this.nextQuestion(this.state.currentQuestion.option_1.text)
                 }
               >
-                {this.state.currentQuestion.option_1}
+                {this.state.currentQuestion.option_1.text}
               </button>
               <button
                 className="option-btn option-btn-2 btn"
                 onClick={() =>
-                  this.nextQuestion(this.state.currentQuestion.option_2)
+                  this.nextQuestion(this.state.currentQuestion.option_2.text)
                 }
               >
-                {this.state.currentQuestion.option_2}
+                {this.state.currentQuestion.option_2.text}
               </button>
             </div>
             <button
