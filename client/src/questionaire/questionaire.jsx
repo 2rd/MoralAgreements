@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Loading from "./loading/loading";
-import PlaceholderNav from "../nav/nav";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./questionaire.css";
@@ -74,7 +73,10 @@ class Questionaire extends Component {
               <button
                 className="option-btn option-btn-1 btn"
                 onClick={() =>
-                  this.nextQuestion(this.state.currentQuestion.option_1.text)
+                  this.nextQuestion(
+                    this.state.currentQuestion,
+                    this.state.currentQuestion.option_1
+                  )
                 }
               >
                 {this.state.currentQuestion.option_1.text}
@@ -82,18 +84,32 @@ class Questionaire extends Component {
               <button
                 className="option-btn option-btn-2 btn"
                 onClick={() =>
-                  this.nextQuestion(this.state.currentQuestion.option_2.text)
+                  this.nextQuestion(
+                    this.state.currentQuestion,
+                    this.state.currentQuestion.option_2
+                  )
                 }
               >
                 {this.state.currentQuestion.option_2.text}
               </button>
             </div>
-            <button
-              className="flip-btn btn"
-              onClick={() => this.nextQuestion("Flip a coin")}
-            >
-              flip a coin
-            </button>
+
+            {this.state.currentQuestion.option_3 ? (
+              <button
+                className="flip-btn btn"
+                onClick={() =>
+                  this.nextQuestion(
+                    this.state.currentQuestion,
+                    this.state.currentQuestion.option_3
+                  )
+                }
+              >
+                flip a coin
+              </button>
+            ) : (
+              ""
+            )}
+
             <Link to="/">Back</Link>
           </div>
         </div>
@@ -101,10 +117,14 @@ class Questionaire extends Component {
     );
   }
 
-  nextQuestion = (option) => {
+  nextQuestion = (question, option) => {
     let curr = this.state.currentQuestionIndex;
     let answers = this.state.answers;
-    answers.push(option);
+    let answer = {
+      question_id: question.question_id,
+      answer: option.text,
+    };
+    answers.push(answer);
     if (curr < this.state.questionaire.questions.length - 1) {
       curr++;
       this.setState({
@@ -116,7 +136,12 @@ class Questionaire extends Component {
       this.setState({ answers: answers });
       this.props.history.push({
         pathname: "/summary",
-        state: { answers: this.state.answers },
+        state: {
+          summary: {
+            questionaire_id: this.state.questionaire.id,
+            answers: answers,
+          },
+        },
       });
     }
   };

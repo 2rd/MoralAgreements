@@ -3,11 +3,9 @@ const express = require("express");
 const app = express();
 const port = 5000;
 const path = require("path");
-const bodyParser = require("body-parser");
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "build")));
-
+app.use(express.json());
 const { MongoClient } = require("mongodb");
 const uri =
   "mongodb+srv://magnusrambech:magnusrambech@moralagreements-3pdtc.mongodb.net/test?retryWrites=true&w=majority";
@@ -53,4 +51,13 @@ app.get("/getQuestionaire", async (req, res) => {
   let questionaire = await findCollectionById(client, recievedID);
   console.log(questionaire);
   res.send(questionaire);
+});
+
+app.post("/postAnswers", async (req, res) => {
+  if (req.body.params.summary) {
+    let document = req.body.params.summary;
+    client.db("moral_agreements").collection("answers").insertOne(document);
+  } else {
+    res.send("Something went wrong...");
+  }
 });

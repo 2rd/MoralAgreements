@@ -1,92 +1,108 @@
 {
-  "_id": { "$oid": "5e9636f71c9d44000099acf4" },
-  "id": "0003",
+  "_id": { "$oid": "5e9636f71c9d44000099acf6" },
+  "id": "0004",
   "title": "Corona Dilemmas 3.0",
   "description": "Infectious disease outbreaks are frequently characterized by scientific uncertainty, social and institutional disruption, and an overall climate of fear and distrust. Public health professionals may be forced to weigh and prioritize potentially competing ethical values in the face of severe time and resource constraints. We would like to know what you would do if you were one of them to decide about life or death.",
   "theories": ["Theory_1", "Theory_2", "Theory_3"],
   "questions": [
     {
+      "question_id": 0,
       "text": "You and your 27-year-old daughter have been tested positive with the Covid-19 virus. Suddenly both of you experience difficulties breathing. According to the doctor, both of you would die without an immediate ventilator treatment. Unfortunately there's only one ventilator left at the hospital.",
       "img": "https://picsum.photos/300/200",
       "question": "Who do you want to receive the ventilator?",
-      "option_1": { "text": "You", "theory": "Theory_1" },
+      "option_1": { "text": "You", "theories": [] },
       "option_2": {
         "text": "Your 27-year-old daughter",
-        "theory": "Theory_2"
+        "theories": []
       },
-      "option_3": { "text": "Flip a coin" }
+      "option_3": { "text": "Flip a coin", "theories": [] }
     },
     {
+      "question_id": 1,
       "text": "A 75-year old man and a 16-year old boy both require a ventilator urgently. If they receive one immediately, doctors estimate a survival chance of 90% for the boy; 60% for the elderly man. The chances to survive without a ventilator are 30% for the boy and 0% for the elderly man who would would die immediately. You are the head of the hospital and you know that there's only one ventilator left.",
       "img": "https://picsum.photos/300/200",
       "question": "Who receives the last ventilator?",
-      "option_1": { "text": "The 75-year old man", "theory": "" },
-      "option_2": { "text": "The 15-year old boy", "theory": "" },
-      "option_3": { "text": "Flip a coin", "theory": "" }
+      "option_1": {
+        "text": "The 75-year old man",
+        "theories": ["Theory_1", "Theory_2"]
+      },
+      "option_2": {
+        "text": "The 15-year old boy",
+        "theories": ["Theory_2", "Theory_3"]
+      },
+      "option_3": { "text": "Flip a coin", "theories": ["Theory_3"] }
     },
     {
+      "question_id": 2,
       "text": "You and your friend David both experience a very serious Covid-19 infection and both of you need a ventilator immediately in order to survive. Because the hospital has only one ventilator left, they can only save one of you. Unlike David, you are a registered organ donor. If he receives the ventilator and you die, your organs would save two other patients who would have died otherwise.",
       "img": "https://picsum.photos/300/200",
       "question": "You decide. Who gets the ventilator?",
-      "option_1": { "text": "You", "theory": "" },
-      "option_2": { "text": "Your friend David", "theory": "" },
-      "option_3": { "text": "Flip a coin", "theory": "" }
+      "option_1": { "text": "You", "theories": [] },
+      "option_2": { "text": "Your friend David", "theories": [] },
+      "option_3": { "text": "Flip a coin", "theories": [] }
     },
     {
+      "question_id": 3,
       "text": "A 95-year old woman at a hospital receives intensive care with a ventilator, but as her attending physician you know that her chance to survive is very small. Suddenly, a 12-year old girl with asthma arrives at the hospital. Without a ventilator she would die, but unfortunately there's no other ventilator available. ",
       "img": "https://picsum.photos/300/200",
       "question": "Do you take the ventilator from the 95-year old woman and give it to the 12-year old girl?",
-      "option_1": { "text": "Yes", "theory": "" },
-      "option_2": { "text": "No", "theory": "" }
+      "option_1": { "text": "Yes", "theories": [] },
+      "option_2": { "text": "No", "theories": [] }
     },
     {
+      "question_id": 4,
       "text": "Your father and another man of approximately the same age arrive simultaneously at the hospital with a serious Covid-19 infection. Both require a ventilator immediately to survive. Based on medical history, a doctor estimates that your father needs 10 days of artificial respiration to fully recover, while the other man would need the ventilator only for 5 days. ",
       "img": "https://picsum.photos/300/200",
       "question": "Who should receive the ventilator?",
       "option_1": {
         "text": "Your father who needs it for 10 days",
-        "theory": ""
+        "theories": []
       },
       "option_2": {
         "text": "The other man who needs it for 5 days",
-        "theory": ""
+        "theories": []
       },
-      "option_3": { "text": "Flip a coin", "theory": "" }
+      "option_3": { "text": "Flip a coin", "theories": [] }
     },
     {
+      "question_id": 5,
       "text": "The society is in a lockdown and as a member of the national parliament you need to vote whether schools should open again. On the one hand, lifting restrictions may increase the spread of the disease and result in a higher death toll. On the other hand, children experiencing domestic violence are more vulnerable than before and the risk of child rapes increased. ",
       "img": "https://picsum.photos/300/200",
       "question": "What do you vote for?",
-      "option_1": { "text": "Keep schools closed", "theory": "" },
-      "option_2": { "text": "Open schools", "theory": "" }
+      "option_1": { "text": "Keep schools closed", "theories": [] },
+      "option_2": { "text": "Open schools", "theories": [] }
     },
     {
+      "question_id": 6,
       "text": "Showing that a vaccine works is typically done through a large study, in which thousands of people receive either a vaccine or a placebo, while researchers keep track of how many get infected naturally. Such a study usually takes multiple months. A faster alternative is to infect healthy people in order to check whether those vaccinated don’t develop any symptoms.",
       "img": "https://picsum.photos/300/200",
       "question": "As a scientist working on a vaccine, would you infect healthy volunteers?",
-      "option_1": { "text": "Yes", "theory": "" },
-      "option_2": { "text": "No", "theory": "" }
+      "option_1": { "text": "Yes", "theories": [] },
+      "option_2": { "text": "No", "theories": [] }
     },
     {
+      "question_id": 7,
       "text": "Mobile apps using tracking information for infection control could help to slow down the spread of an epidemic and thereby save thousands of lives. They are meant only for the time of emergency, but they share similarities with surveillance systems of authoritarian states and always pose a risk of being misused for other purposes. ",
       "img": "https://picsum.photos/300/200",
       "question": "As a normal citizen, do you want politicians to enforce the use of such an app?",
-      "option_1": { "text": "Yes", "theory": "" },
-      "option_2": { "text": "No", "theory": "" }
+      "option_1": { "text": "Yes", "theories": [] },
+      "option_2": { "text": "No", "theories": [] }
     },
     {
+      "question_id": 8,
       "text": "A vaccine for Covid-19 has been developed, but the supplies are still low. You are in charge of the distribution of the vaccines. In order to save as many lives as possible, a consulting doctor suggests to exclude people with other life-threatening conditions who are expected to die very soon regardless of the vaccine.",
       "img": "https://picsum.photos/300/200",
       "question": "Would you follow the suggestion and exclude those patients? ",
-      "option_1": { "text": "Yes", "theory": "" },
-      "option_2": { "text": "No", "theory": "" }
+      "option_1": { "text": "Yes", "theories": [] },
+      "option_2": { "text": "No", "theories": [] }
     },
     {
+      "question_id": 9,
       "text": "Tonight will be the prom of your girl-/boyfriend and you have promised to be there. Just before you  leave the house, you receive the information that your brother - who lives in the same household like you - was tested positive on Covid-19. Although you don't show any symptoms, you are advised to self-quarantine yourself for 14 days. The prom itself is a public event with 200 people and legally permitted by the authorities.",
       "img": "https://picsum.photos/300/200",
       "question": "What do you do?",
-      "option_1": { "text": "Still go to the prom", "theory": "" },
-      "option_2": { "text": "Stay home", "theory": "" }
+      "option_1": { "text": "Still go to the prom", "theories": [] },
+      "option_2": { "text": "Stay home", "theories": [] }
     }
   ]
 }
