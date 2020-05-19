@@ -1,5 +1,15 @@
-.Hoved{
-    
-    text-align: center;
-    color: rgb(36, 163, 206);
+.creategame-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.init-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.textarea {
+  resize: none;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Loading from "./loading/loading";
+import { v1 as uuidv1 } from "uuid";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./questionaire.css";
@@ -10,9 +11,11 @@ class Questionaire extends Component {
     questionaire: {},
     currentQuestionIndex: 0,
     currentQuestion: {},
+    scores: [],
     answers: [],
   };
   async componentDidMount() {
+    console.log(uuidv1());
     await this.setState({ id: this.props.match.params["id"] });
     this.fetchQuestionaire();
   }
@@ -37,7 +40,7 @@ class Questionaire extends Component {
     /**If a questionaire of ID from input can't be found */
     return !this.state.started ? (
       <div className="questionaire-wrapper">
-        <div>
+        <div className="questionaire-init">
           <h1>{this.state.questionaire.title}</h1>
           <p>{this.state.questionaire.description}</p>
           <button
@@ -117,14 +120,42 @@ class Questionaire extends Component {
     );
   }
 
+  reloadImg = () => {
+    return this.state.currentQuestion.img + "#" + uuidv1();
+  };
+  incrementScore = (theories) => {
+    let currentScores = this.state.scores;
+    theories.map((theory) => {
+      currentScores.map((score) => {
+        if (score.theory == theory) {
+          let newScore = score.score + 1;
+          score.score = newScore;
+        }
+      });
+    });
+
+    this.setState({ scores: currentScores });
+  };
+  decrementScore = () => {};
+  generateScores = () => {
+    let theories = this.state.questionaire.theories;
+    let scores = [];
+    theories.map((theory) => {
+      let temp = { theory: theory, score: 0 };
+      scores.push(temp);
+    });
+    this.setState({ scores: scores });
+  };
   nextQuestion = (question, option) => {
     let curr = this.state.currentQuestionIndex;
     let answers = this.state.answers;
     let answer = {
       question_id: question.question_id,
       answer: option.text,
+      theories: option.theories,
     };
     answers.push(answer);
+    this.incrementScore(option.theories);
     if (curr < this.state.questionaire.questions.length - 1) {
       curr++;
       this.setState({
@@ -139,7 +170,9 @@ class Questionaire extends Component {
         state: {
           summary: {
             questionaire_id: this.state.questionaire.id,
+            scores: this.state.scores,
             answers: answers,
+            date: new Date(),
           },
         },
       });
@@ -161,6 +194,7 @@ class Questionaire extends Component {
             questionaire: questionaire,
             currentQuestion: questionaire["questions"][0],
           });
+          this.generateScores();
         } else {
           this.setState({
             isLoading: false,

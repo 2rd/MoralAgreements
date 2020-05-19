@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+
+import { PieChart, Pie, Sector, Cell } from "recharts";
+
 import "./summary.css";
 import PlaceholdeNav from "../nav/nav";
 class Summary extends Component {

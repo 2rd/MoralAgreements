@@ -1,9 +1,15 @@
 {
   "_id": { "$oid": "5e9636f71c9d44000099acf6" },
-  "id": "0004",
-  "title": "Corona Dilemmas 3.0",
+  "id": "0001",
+  "title": "Corona Dilemmas",
   "description": "Infectious disease outbreaks are frequently characterized by scientific uncertainty, social and institutional disruption, and an overall climate of fear and distrust. Public health professionals may be forced to weigh and prioritize potentially competing ethical values in the face of severe time and resource constraints. We would like to know what you would do if you were one of them to decide about life or death.",
-  "theories": ["Act Utilitarianism", "Kantian Ethics", "Aristotelianism", "Ethical Egoism", "Classical Natural Law Theory"],
+  "theories": [
+    "Act Utilitarianism",
+    "Kantian Ethics",
+    "Aristotelianism",
+    "Ethical Egoism",
+    "Classical Natural Law Theory"
+  ],
   "questions": [
     {
       "question_id": 0,
@@ -12,14 +18,21 @@
       "question": "Who do you ask the doctors to give the ventilator to?",
       "option_1": {
         "text": "Yourself",
-        "theories": ["Ethical Egoism"] },
+        "theories": ["Ethical Egoism"]
+      },
       "option_2": {
         "text": "Your 27-year-old daughter",
-        "theories": ["Act Utilitarianism", "Aristotelianism", "Ethical Egoism", "Classical Natural Law Theory"]
+        "theories": [
+          "Act Utilitarianism",
+          "Aristotelianism",
+          "Ethical Egoism",
+          "Classical Natural Law Theory"
+        ]
       },
       "option_3": {
         "text": "Flip a coin",
-        "theories": ["Kantian Ethics"] }
+        "theories": ["Kantian Ethics"]
+      }
     },
     {
       "question_id": 1,
@@ -28,7 +41,11 @@
       "question": "Who do you decide to receive the last ventilator?",
       "option_1": {
         "text": "The 75-year old man",
-        "theories": ["Aristotelianism", "Ethical Egoism", "Classical Natural Law Theory"]
+        "theories": [
+          "Aristotelianism",
+          "Ethical Egoism",
+          "Classical Natural Law Theory"
+        ]
       },
       "option_2": {
         "text": "The 15-year old boy",
@@ -36,7 +53,8 @@
       },
       "option_3": {
         "text": "Flip a coin",
-        "theories": ["Kantian Ethics"] }
+        "theories": ["Kantian Ethics"]
+      }
     },
     {
       "question_id": 2,
@@ -45,13 +63,16 @@
       "question": "Who do you give the ventilator?",
       "option_1": {
         "text": "Yourself",
-        "theories": ["Ethical Egoism", "Classical Natural Law Theory"] },
+        "theories": ["Ethical Egoism", "Classical Natural Law Theory"]
+      },
       "option_2": {
         "text": "Your friend David",
-        "theories": ["Act Utilitarianism", "Aristotelianism", "Ethical Egoism"] },
+        "theories": ["Act Utilitarianism", "Aristotelianism", "Ethical Egoism"]
+      },
       "option_3": {
         "text": "Flip a coin",
-        "theories": ["Kantian Ethics"] }
+        "theories": ["Kantian Ethics"]
+      }
     },
     {
       "question_id": 3,
@@ -60,10 +81,12 @@
       "question": "Do you take the ventilator from the 95-year old woman and give it to the 12-year old girl?",
       "option_1": {
         "text": "Yes",
-        "theories": ["Act Utilitarianism", "Classical Natural Law Theory"] },
+        "theories": ["Act Utilitarianism", "Classical Natural Law Theory"]
+      },
       "option_2": {
         "text": "No",
-        "theories": ["Kantian Ethics", "Aristotelianism", "Ethical Egoism"] }
+        "theories": ["Kantian Ethics", "Aristotelianism", "Ethical Egoism"]
+      }
     },
     {
       "question_id": 4,
@@ -90,10 +113,17 @@
       "question": "What do you vote for?",
       "option_1": {
         "text": "Keep schools closed",
-        "theories": ["Act Utilitarianism", "Kantian Ethics", "Ethical Egoism", "Classical Natural Law Theory"] },
+        "theories": [
+          "Act Utilitarianism",
+          "Kantian Ethics",
+          "Ethical Egoism",
+          "Classical Natural Law Theory"
+        ]
+      },
       "option_2": {
         "text": "Open schools",
-        "theories": ["Act Utilitarianism", "Aristotelianism"] }
+        "theories": ["Act Utilitarianism", "Aristotelianism"]
+      }
     },
     {
       "question_id": 6,
@@ -102,10 +132,17 @@
       "question": "As a scientist working on a vaccine, do you infect healthy volunteers, if you were legally allowed to?",
       "option_1": {
         "text": "Yes",
-        "theories": ["Act Utilitarianism", "Aristotelianism", "Ethical Egoism", "Classical Natural Law Theory"] },
+        "theories": [
+          "Act Utilitarianism",
+          "Aristotelianism",
+          "Ethical Egoism",
+          "Classical Natural Law Theory"
+        ]
+      },
       "option_2": {
         "text": "No",
-        "theories": ["Kantian Ethics"] }
+        "theories": ["Kantian Ethics"]
+      }
     },
     {
       "question_id": 7,
@@ -114,10 +151,18 @@
       "question": "As a normal citizen, would you personally install such an app?",
       "option_1": {
         "text": "Yes",
-        "theories": ["Act Utilitarianism", "Kantian Ethics", "Aristotelianism", "Ethical Egoism", "Classical Natural Law Theory"] },
+        "theories": [
+          "Act Utilitarianism",
+          "Kantian Ethics",
+          "Aristotelianism",
+          "Ethical Egoism",
+          "Classical Natural Law Theory"
+        ]
+      },
       "option_2": {
         "text": "No",
-        "theories": ["Ethical Egoism"] }
+        "theories": ["Ethical Egoism"]
+      }
     },
     {
       "question_id": 8,
@@ -126,10 +171,12 @@
       "question": "Would you follow the suggestion and exclude those patients?",
       "option_1": {
         "text": "Yes",
-        "theories": ["Act Utilitarianism", "Classical Natural Law Theory"] },
+        "theories": ["Act Utilitarianism", "Classical Natural Law Theory"]
+      },
       "option_2": {
         "text": "No",
-        "theories": ["Kantian Ethics", "Aristotelianism", "Ethical Egoism"] }
+        "theories": ["Kantian Ethics", "Aristotelianism", "Ethical Egoism"]
+      }
     },
     {
       "question_id": 9,
@@ -138,10 +185,17 @@
       "question": "What do you do?",
       "option_1": {
         "text": "Still go to the prom",
-        "theories": ["Kantian Ethics", "Classical Natural Law Theory"] },
+        "theories": ["Kantian Ethics", "Classical Natural Law Theory"]
+      },
       "option_2": {
         "text": "Stay home",
-        "theories": ["Act Utilitarianism", "Aristotelianism", "Ethical Egoism", "Classical Natural Law Theory"] }
+        "theories": [
+          "Act Utilitarianism",
+          "Aristotelianism",
+          "Ethical Egoism",
+          "Classical Natural Law Theory"
+        ]
+      }
     }
   ]
 }
