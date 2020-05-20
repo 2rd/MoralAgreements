@@ -11,13 +11,11 @@ import * as serviceWorker from "./serviceWorker";
 
 const routing = (
   <HashRouter>
-    <div style={{ width: 100 + "%", height: 100 + "%" }}>
-      <Route exact path="/test" component={App} />
-      <Route exact path="/" component={Homescreen} />
-      <Route path="/create" component={Creategame} />
-      <Route path="/summary" component={Summary} />
-      <Route path="/questionaire/:id" component={Questionaire} />
-    </div>
+    <Route exact path="/test" component={App} />
+    <Route exact path="/" component={Homescreen} />
+    <Route path="/create" component={Creategame} />
+    <Route path="/summary" component={Summary} />
+    <Route path="/questionaire/:id" component={Questionaire} />
   </HashRouter>
 );
 

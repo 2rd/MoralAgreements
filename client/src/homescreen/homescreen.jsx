@@ -1,16 +1,18 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./homescreen.css";
-import PlaceholderNav from "../nav/nav";
+import Nav from "../nav/nav";
 import InputPin from "./inputpin/inputpin";
 
 class Homescreen extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <h1>Homescreen</h1>
+      <div className="homescreen-wrapper">
         <InputPin redir={(value) => this.redirect(value)} />
-        <PlaceholderNav />
+        <h3>or..</h3>
+        <Link to="/create">Create a new game</Link>
+        <Nav />
       </div>
     );
   }

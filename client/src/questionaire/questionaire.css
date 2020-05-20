@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 .questionaire-init {
   display: flex;
@@ -44,8 +45,10 @@
 }
 .option-btn-1 {
   border-radius: 40px 0px 0px 0px;
+  flex: 1;
 }
 .option-btn-2 {
+  flex: 1;
   border-radius: 0px 40px 0px 0px;
 }
 .flip-btn {

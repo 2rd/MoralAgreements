@@ -1,7 +1,7 @@
 //Environment variables
 const express = require("express");
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 const path = require("path");
 
 app.use(express.static(path.join(__dirname, "build")));
@@ -13,8 +13,8 @@ const client = new MongoClient(uri, { useUnifiedTopology: true });
 client.connect();
 
 //server start
-app.listen(port, () =>
-  console.log(`INFO 381 Project listening on port ${port}!`)
+app.listen(PORT, () =>
+  console.log(`INFO 381 Project listening on port ${PORT}!`)
 );
 
 async function listDatabases(client) {
@@ -44,6 +44,10 @@ app.get("/message", (req, res) => {
   res.send("Hello World!");
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "/build/", "index.html"));
+});
+
 app.get("/getQuestionaire", async (req, res) => {
   console.log(req.query["ID"]);
   let recievedID = req.query["ID"];
@@ -52,7 +56,26 @@ app.get("/getQuestionaire", async (req, res) => {
   console.log(questionaire);
   res.send(questionaire);
 });
+app.post("/addQuestionaire", async (req, res) => {
+  if (req.body.params.questionaire) {
+    let document = req.body.params.questionaire;
+    let currentHighestId = await client
+      .db("moral_agreements")
+      .collection("questionaires")
+      .countDocuments({});
 
+    let documentID = ("000" + (currentHighestId + 1)).slice(-4);
+    document.id = documentID;
+    console.log(document);
+    await client
+      .db("moral_agreements")
+      .collection("questionaires")
+      .insertOne(document);
+    res.send({ id: documentID });
+  } else {
+    res.send("Something went wrong...");
+  }
+});
 app.post("/postAnswers", async (req, res) => {
   if (req.body.params.summary) {
     let document = req.body.params.summary;

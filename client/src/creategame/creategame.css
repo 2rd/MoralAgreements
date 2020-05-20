@@ -1,9 +1,24 @@
+label {
+  font-size: 14px;
+  align-self: flex-start;
+}
+input[type="text"],
+textarea[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 .creategame-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  max-width: 750px;
 }
 .init-form {
   text-align: center;
@@ -12,4 +27,106 @@
 }
 .textarea {
   resize: none;
+}
+.textarea-big {
+  height: 200px;
+}
+.form-init-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-questions-wrapper {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.question-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.options-container {
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.option-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.chexbox-containers-wrapper {
+  width: 100%;
+}
+.checkbox-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkbox-container > label {
+  font-size: 12px;
+}
+
+.addbutton {
+  margin-top: 10px;
+  box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+  background: linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+  background-color: #b8e356;
+  border-radius: 6px;
+  border: 1px solid #83c41a;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #86ae47;
+}
+
+.createbutton {
+  width: 100%;
+  background-color: #44c767;
+  border-radius: 14px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+
+.nextbutton {
+  width: 100%;
+  background-color: #44c767;
+  border-radius: 14px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+.unclickable {
+  background-color: brown;
 }

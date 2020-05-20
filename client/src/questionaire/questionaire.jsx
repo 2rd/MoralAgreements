@@ -4,6 +4,7 @@ import { v1 as uuidv1 } from "uuid";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./questionaire.css";
+import Nav from "../nav/nav";
 class Questionaire extends Component {
   state = {
     started: false,
@@ -40,6 +41,7 @@ class Questionaire extends Component {
     /**If a questionaire of ID from input can't be found */
     return !this.state.started ? (
       <div className="questionaire-wrapper">
+        <Nav />
         <div className="questionaire-init">
           <h1>{this.state.questionaire.title}</h1>
           <p>{this.state.questionaire.description}</p>
@@ -55,11 +57,11 @@ class Questionaire extends Component {
     ) : (
       /**If a questionaire matches ID */
       <div className="questionaire-wrapper">
+        <Nav />
         <div className="section">
           <h1 className="questionaire-title">
             {this.state.questionaire.title}
           </h1>
-          <p className="questionaire-id">id: {this.state.questionaire.id}</p>
         </div>
         <div className="question-section section">
           {this.state.currentQuestion.img ? (
@@ -112,8 +114,6 @@ class Questionaire extends Component {
             ) : (
               ""
             )}
-
-            <Link to="/">Back</Link>
           </div>
         </div>
       </div>

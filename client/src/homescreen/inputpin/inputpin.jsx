@@ -6,7 +6,7 @@ class InputPin extends Component {
   render() {
     return (
       <div className="inputpin-wrapper">
-        <h3>Enter game pin</h3>
+        <h3>Enter game code</h3>
         <PinInput
           length={4}
           initialValue=""
