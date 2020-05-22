@@ -19,7 +19,7 @@ class Questionaire extends Component {
     theoryData: [
       {
         theory: "Act Utilitarianism",
-        iconText: "twemoji:brain",
+        iconText: "twemoji:balance-scale",
         description:
           "An action is right or wrong depending on the amount of benefit it provides to  the most people.",
         quote: "The greatest amount of good for the greatest amount of people",
@@ -29,7 +29,7 @@ class Questionaire extends Component {
       },
       {
         theory: "Kantian Ethics",
-        iconText: "twemoji:balance-scale",
+        iconText: "twemoji:brain",
         description:
           "People have a duty to do the right thing no matter the result of said action. Everyone should act the way they want others to act in the same situation as a general law. ",
         quote:
@@ -51,7 +51,7 @@ class Questionaire extends Component {
       },
       {
         theory: "Ethical Egoism",
-        iconText: "emojione:hammer",
+        iconText: "emojione-v1:detective",
         description:
           "People act in their own self-interests and therefore it’s ethical correct to pursue and maximize one’s own self-interest",
         quote: "An act is moral if it maximizes the self-interest of the doer",
@@ -61,7 +61,7 @@ class Questionaire extends Component {
       },
       {
         theory: "Classical Natural Law Theory",
-        iconText: "openmoji:trump",
+        iconText: "mdi:human-handsup",
         description:
           "An act can only be truly moral if the motives behind the act is right . What we can consider right depends solely on the rational nature of human beings which means that the right thing to do is the natural thing. What we constitute as right or wrong Is the same for everyone.",
         quote:
