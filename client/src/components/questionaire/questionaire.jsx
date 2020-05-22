@@ -90,7 +90,7 @@ class Questionaire extends Component {
     if (this.state.notFound) {
       return (
         <div className="questionaire-wrapper">
-          <h1>Not found..</h1>
+          <h1 style={{ color: "white" }}>Not found..</h1>
           <Link to="/">Back</Link>
         </div>
       );
@@ -111,15 +111,15 @@ class Questionaire extends Component {
                 return <TheoryModal data={this.getTheoryData(theory)} />;
               })}
             </div>
-            <button
-              className="start-btn"
-              onClick={() => {
-                this.setState({ started: true });
-              }}
-            >
-              Start
-            </button>
           </div>
+          <button
+            className="start-btn"
+            onClick={() => {
+              this.setState({ started: true });
+            }}
+          >
+            Start
+          </button>
         </div>
       </div>
     ) : (
