@@ -1,0 +1,48 @@
+.theory-modal-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.theory-modal-wrapper:hover {
+  cursor: pointer;
+}
+.theory-icon-small {
+  width: 20px;
+  height: 20px;
+}
+
+.theory-modal-title {
+  color: white;
+  font-size: 14px;
+}
+
+.theory-modal-title-large {
+  font-size: 30px;
+  color: white;
+}
+.modal-fullscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+.theory-modal-content {
+  transition: all 0.3s ease-out;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

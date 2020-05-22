@@ -3,6 +3,7 @@ import "./creategame.css";
 import axios from "axios";
 import { v1 as uuidv1 } from "uuid";
 import Nav from "../nav/nav";
+import Loading from "../loading/loading";
 
 class CreateGame extends Component {
   state = {
@@ -13,6 +14,7 @@ class CreateGame extends Component {
     initiated: false,
     currentlyChaning: 0,
     flipCoin: false,
+    awaitingCreation: false,
   };
 
   componentDidMount() {}
@@ -48,7 +50,9 @@ class CreateGame extends Component {
                 this.submitQuestion(e);
               }}
             >
-              <h2>Dilemma {this.state.currentlyChaning + 1}</h2>
+              <h2 style={{ color: "white" }}>
+                Dilemma {this.state.currentlyChaning + 1}
+              </h2>
               <label>Image Link</label>
               <input type="text" name="img" placeholder="optional"></input>
               <label>Text</label>
@@ -64,7 +68,12 @@ class CreateGame extends Component {
                 <div className="option-box">
                   <div className="option-header">
                     <label>Option 1</label>
-                    <input type="text" name="option_1" required></input>
+                    <input
+                      type="text"
+                      name="option_1"
+                      className="option-text"
+                      required
+                    ></input>
                   </div>
                   <div className="chexbox-containers-wrapper">
                     <div className="checkbox-container">
@@ -118,7 +127,12 @@ class CreateGame extends Component {
                 <div className="option-box">
                   <div className="option-header">
                     <label>Option 2</label>
-                    <input type="text" name="option_2" required></input>
+                    <input
+                      type="text"
+                      name="option_2"
+                      className="option-text"
+                      required
+                    ></input>
                   </div>
                   <div className="chexbox-containers-wrapper">
                     <div className="checkbox-container">
@@ -255,6 +269,17 @@ class CreateGame extends Component {
             </button>
           </div>
         )}
+
+        {this.state.awaitingCreation ? (
+          <div className="fullscreen-modal">
+            <h3 className="modal-text">Creating game</h3>
+            <div className="modal-content">
+              <Loading />
+            </div>
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
     );
   }
@@ -330,7 +355,8 @@ class CreateGame extends Component {
     return theories;
   };
   getAllTheories = () => {};
-  createQuestionaire = () => {
+  createQuestionaire = (async) => {
+    this.setState({ awaitingCreation: true });
     let questionaire = {
       title: this.state.title,
       description: this.state.description,
@@ -346,6 +372,13 @@ class CreateGame extends Component {
       })
       .then((response) => {
         console.log(response);
+        this.setState({ awaitingCreation: false });
+        this.props.history.push({
+          pathname: "/created",
+          state: {
+            data: response.data,
+          },
+        });
       })
       .catch(function (error) {
         console.log(error);

@@ -1,0 +1,81 @@
+.summary-wrapper {
+  background-color: #1b4b6a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.summary-header {
+  color: white;
+}
+.summary-scores {
+  max-width: 1024px;
+  width: 100%;
+}
+.summary-score-box {
+  display: flex;
+  flex-direction: row;
+}
+.score-theory-name {
+  color: white;
+  font-size: 10px;
+  margin: 0;
+}
+.summary-score-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+
+.summary-icon-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.progress-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-outer {
+  width: 90%;
+  margin: unset;
+}
+
+.summary-highest {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.highest-container {
+  width: 95%;
+}
+.highest-title {
+  font-size: 16px;
+  color: white;
+  font-weight: 100;
+}
+.highest-title > strong {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.highest-description {
+  font-size: 14px;
+}
+.highest-quote {
+  font-size: 12px;
+  font-style: italic;
+}

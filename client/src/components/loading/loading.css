@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 .lds-roller {
   display: inline-block;
@@ -22,7 +21,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: gray;
+  background: white;
   margin: -4px 0 0 -4px;
 }
 .lds-roller div:nth-child(1) {

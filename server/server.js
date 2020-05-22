@@ -80,6 +80,7 @@ app.post("/postAnswers", async (req, res) => {
   if (req.body.params.summary) {
     let document = req.body.params.summary;
     client.db("moral_agreements").collection("answers").insertOne(document);
+    res.send(document);
   } else {
     res.send("Something went wrong...");
   }

@@ -1,6 +1,7 @@
 label {
   font-size: 14px;
   align-self: flex-start;
+  color: white;
 }
 input[type="text"],
 textarea[type="text"] {
@@ -14,11 +15,12 @@ textarea[type="text"] {
 }
 .creategame-wrapper {
   display: flex;
+  background-color: #1b4b6a;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  max-width: 750px;
+  width: 100%;
 }
 .init-form {
   text-align: center;
@@ -39,7 +41,6 @@ textarea[type="text"] {
   align-items: center;
 }
 .form-questions-wrapper {
-  width: 95%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -55,6 +56,7 @@ textarea[type="text"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 5px;
 }
 .options-container {
   justify-content: space-around;
@@ -63,7 +65,9 @@ textarea[type="text"] {
   display: flex;
   flex-direction: row;
 }
-
+.option-text {
+  width: 150px !important;
+}
 .option-header {
   align-items: center;
   display: flex;
@@ -128,5 +132,30 @@ textarea[type="text"] {
   text-shadow: 0px 1px 0px #2f6627;
 }
 .unclickable {
-  background-color: brown;
+  border: none;
+  background-color: black;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.fullscreen-modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+.modal-text {
+  color: white;
 }

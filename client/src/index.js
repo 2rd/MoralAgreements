@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Creategame from "./creategame/creategame.jsx";
-import Homescreen from "./homescreen/homescreen.jsx";
-import Questionaire from "./questionaire/questionaire.jsx";
-import Summary from "./summary/summary.jsx";
+import Creategame from "./components/creategame/creategame.jsx";
+import Homescreen from "./components/homescreen/homescreen.jsx";
+import Questionaire from "./components/questionaire/questionaire.jsx";
+import Summary from "./components/summary/summary.jsx";
 import App from "./App";
 import { HashRouter, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
+import Created from "./components/creategame/created/created";
 
 const routing = (
   <HashRouter>
@@ -16,6 +17,7 @@ const routing = (
     <Route path="/create" component={Creategame} />
     <Route path="/summary" component={Summary} />
     <Route path="/questionaire/:id" component={Questionaire} />
+    <Route path="/created" component={Created} />
   </HashRouter>
 );
 
