@@ -58,7 +58,7 @@
     },
     {
       "question_id": 2,
-      "text": "You and your friend David both experience a very serious Covid-19 infection and both of you need a ventilator immediately in order to survive. Because the hospital has only one ventilator left, they can only save one of you. Unlike David, you are a registered organ donor. If he receives the ventilator and you die, your organs would save two other patients who would have died otherwise. The doctors ask you to make the decision.",
+      "text": "You and your friend David both experience a very serious Covid-19 infection and both of you need a ventilator immediately in order to survive. Because the hospital has only one ventilator left, they can only save one of you. Daniel has a wife and three children, whereas you live alone without close family connections.",
       "img": "https://picsum.photos/300/200",
       "question": "Who do you give the ventilator?",
       "option_1": {
@@ -108,7 +108,7 @@
     },
     {
       "question_id": 5,
-      "text": "The society is in a lock down and as a member of the national parliament you need to vote whether schools should open again. On the one hand, lifting restrictions may increase the spread of the disease that is still not completely under control and result in a higher death toll. On the other hand, children experiencing domestic violence are more vulnerable than before and the risk of child rapes increased.",
+      "text": "The society is in a lock down and as a member of the national parliament you need to vote whether schools should open again. On the one hand, lifting restrictions may increase the spread of the disease that is still not completely under control and can result in a higher death toll. On the other hand, children experiencing domestic violence are more vulnerable than before and the risk to their safety is increased.",
       "img": "https://picsum.photos/300/200",
       "question": "What do you vote for?",
       "option_1": {
