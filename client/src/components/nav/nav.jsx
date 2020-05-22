@@ -7,7 +7,9 @@ class Nav extends Component {
     return (
       <div className="placeholder-box">
         <div className="link-wrapper">
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <span>{"<"}</span>
+          </Link>
         </div>
       </div>
     );

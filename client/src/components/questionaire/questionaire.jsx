@@ -112,6 +112,7 @@ class Questionaire extends Component {
               })}
             </div>
           </div>
+          <div className="fillerStart"></div>
           <button
             className="start-btn"
             onClick={() => {

@@ -4,10 +4,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
 }
 .button-section {
+  bottom: 15px;
   margin-bottom: 20px;
 }
 .top-section {
@@ -84,12 +85,12 @@
   color: white;
   font-weight: bold;
   font-size: 18px;
-
+  position: fixed;
   border: none;
-  margin: 5px;
+  bottom: 20px;
   height: 50px;
   border-radius: 10px;
-  width: 100%;
+  width: 95%;
 }
 .question-text {
   color: white;
@@ -98,6 +99,7 @@
 
 .question-question {
   color: white;
+  text-align: center;
 }
 .theory-icon {
   width: 20px;
@@ -134,6 +136,9 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
+}
+.fillerStart {
+  height: 60px;
 }
 .moral-theories-header {
   color: white;
