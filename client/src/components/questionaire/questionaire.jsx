@@ -21,17 +21,17 @@ class Questionaire extends Component {
         theory: "Act Utilitarianism",
         iconText: "twemoji:balance-scale",
         description:
-          "An action is right or wrong depending on the amount of benefit it provides to  the most people.",
+          "An act is moral, if it maximizes the net increase in happiness for all affected parties.",
         quote: "The greatest amount of good for the greatest amount of people",
         summaryText:
-          "Utilitarianism believe that an action is right or wrong based on their effect. If the action benefits the most people, it is right and is chosen over the other bad actions.  Its calculated from the amount of happiness gained minus pain it causes",
+          "Utilitarianism believe that an action is right or wrong based on their effect. If the action if the act maximizes the net increase in happiness for all affected parties, it is right and is chosen over the other actions.  It is calculated from the amount of happiness gained minus pain it causes",
         philosophers: ["John Stuart", "Jeremy Bentham"],
       },
       {
         theory: "Kantian Ethics",
         iconText: "twemoji:brain",
         description:
-          "People have a duty to do the right thing no matter the result of said action. Everyone should act the way they want others to act in the same situation as a general law. ",
+          "An act is moral, if it follows rational, universalizable duties and ignores personal desires.",
         quote:
           "Act only according to that maxim by which you can at the same time will that it should be a universal law",
         summaryText:
@@ -42,7 +42,7 @@ class Questionaire extends Component {
         theory: "Aristotelianism",
         iconText: "noto:man-superhero",
         description:
-          "A person’s action reflects their inner identity. If a person inhabits a moral identity, then his or her actions will also be moral. ",
+          "An act is moral, if it is consistent with the actions of an excellent character.",
         quote:
           "In order to make a judgement about right or wrong, one must analyse and conclude what an individual who possesses all those virtues, would do in that particular situation",
         summaryText:
@@ -63,7 +63,7 @@ class Questionaire extends Component {
         theory: "Classical Natural Law Theory",
         iconText: "mdi:human-handsup",
         description:
-          "An act can only be truly moral if the motives behind the act is right . What we can consider right depends solely on the rational nature of human beings which means that the right thing to do is the natural thing. What we constitute as right or wrong Is the same for everyone.",
+          "An act is moral, if it is part of human nature.",
         quote:
           "Live peacefully, be reasonable, express gratitude, procreate and acquire wisdom and pass it on",
         summaryText:
@@ -103,8 +103,9 @@ class Questionaire extends Component {
           <h1>{this.state.questionaire.title}</h1>
           <p>{this.state.questionaire.description}</p>
           <div className="moral-theories-header">
-            <h3>Moral Theories</h3>
-            <h4>(click for more info)</h4>
+            <h2>Moral Theories</h2>
+            <p>When answering dilemmas, the game will tell you which moral theories your decisions align with. Which one do you think you agree the most with?</p>
+            <h4>(click the icons for more info)</h4>
 
             <div className="moral-theories-container">
               {this.state.questionaire.theories.map((theory) => {
