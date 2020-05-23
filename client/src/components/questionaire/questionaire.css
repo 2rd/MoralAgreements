@@ -91,6 +91,7 @@
   height: 50px;
   border-radius: 10px;
   width: 95%;
+  max-width: 500px;
 }
 .question-text {
   color: white;

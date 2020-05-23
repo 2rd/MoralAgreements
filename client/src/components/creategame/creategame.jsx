@@ -196,6 +196,7 @@ class CreateGame extends Component {
                   <div className="option-header">
                     <label>Option 3</label>
                     <input
+                      style={{ color: "white" }}
                       disabled
                       type="text"
                       name="option_3"
