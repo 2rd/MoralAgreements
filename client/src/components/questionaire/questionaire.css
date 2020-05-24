@@ -29,6 +29,13 @@
   color: white;
   font-weight: bold;
 }
+
+.moral-theories-header > h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
 .button-container {
   width: 100%;
   display: flex;
