@@ -12,6 +12,24 @@ class Progress extends Component {
             className="progress-inner"
             style={{ width: this.props.percentage + "%" }}
           ></div>
+          {this.props.avg ? (
+            <div
+              className="progress-inner-avg"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                height: "10px",
+                width: "2px",
+                background: "white",
+                marginLeft: this.props.avg + "%",
+              }}
+            >
+              <p>others</p>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     );
