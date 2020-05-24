@@ -73,7 +73,6 @@ class Questionaire extends Component {
     ],
   };
   async componentDidMount() {
-    console.log(uuidv1());
     await this.setState({ id: this.props.match.params["id"] });
     this.fetchQuestionaire();
   }
@@ -101,7 +100,9 @@ class Questionaire extends Component {
         <Nav />
         <div className="questionaire-init">
           <h1>{this.state.questionaire.title}</h1>
-          <p>{this.state.questionaire.description}</p>
+          <p className="questionaire-desc">
+            {this.state.questionaire.description}
+          </p>
           <div className="moral-theories-header">
             <h3>Moral Theories</h3>
             <h4>(click for more info)</h4>

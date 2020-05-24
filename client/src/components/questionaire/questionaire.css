@@ -152,3 +152,7 @@
   color: #f1c281;
   font-size: 10px;
 }
+
+.questionaire-desc {
+  line-height: 30px;
+}

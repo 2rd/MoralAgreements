@@ -4,6 +4,7 @@ import "./summary.css";
 import PlaceholdeNav from "../nav/nav";
 import Progress from "../progress/progress";
 import { Link } from "react-router-dom";
+import AvgProgress from "../progress/avgprogress";
 class Summary extends Component {
   state = {
     highest: {
@@ -54,6 +55,11 @@ class Summary extends Component {
                     <div className="progress-container">
                       <Progress
                         percentage={this.calculateScorePercentage(score.score)}
+                      />
+                      <AvgProgress
+                        percentage={this.calculateAvgScorePercentage(
+                          score.score
+                        )}
                       />
                     </div>
                   </div>
@@ -125,13 +131,18 @@ class Summary extends Component {
     let percentage = (score / totalscore) * 100;
     return percentage;
   };
+
+  calculateAvgScorePercentage = (score) => {
+    return 50;
+  };
   pushAnswers = () => {
     axios
-      .post("/postAnswers", {
+      .post("/postAnswers2", {
         params: { summary: this.state.summary },
       })
       .then((response) => {
-        console.log(response);
+        if (response.data.totalScores)
+          this.setState({ avgData: response.data });
       });
   };
 }

@@ -39,6 +39,22 @@ async function findCollectionById(client, id) {
   return documents;
 }
 
+function calculateNewTotalScores(dbScores, newScores) {
+  let tempDbScores = [];
+  for (let i in newScores) {
+    let score = newScores[i];
+    for (let j in dbScores) {
+      let dbScore = dbScores[j];
+      if (dbScore.theory == score.theory) {
+        dbScore.score += score.score;
+        tempDbScores.push(dbScore);
+        console.log(dbScore.theory + " :  " + score.theory);
+      }
+    }
+  }
+  return tempDbScores;
+}
+
 // SERVER ROUTES
 app.get("/message", (req, res) => {
   res.send("Hello World!");
@@ -66,7 +82,6 @@ app.post("/addQuestionaire", async (req, res) => {
 
     let documentID = ("000" + (currentHighestId + 1)).slice(-4);
     document.id = documentID;
-    console.log(document);
     await client
       .db("moral_agreements")
       .collection("questionaires")
@@ -83,5 +98,56 @@ app.post("/postAnswers", async (req, res) => {
     res.send(document);
   } else {
     res.send("Something went wrong...");
+  }
+});
+
+app.post("/postAnswers2", async (req, res) => {
+  try {
+    if (req.body.params.summary) {
+      let document = req.body.params.summary;
+      let query = { questionaire_id: document.questionaire_id };
+      let questionaires = await client
+        .db("moral_agreements")
+        .collection("answers2")
+        .find(query)
+        .toArray();
+
+      let updatedDoc = {};
+
+      if (questionaires.length > 0) {
+        let questionaire = questionaires[0];
+        updatedDoc = {
+          questionaire_id: questionaire.questionaire_id,
+          numOfAnswers: questionaire.numOfAnswers + 1,
+          totalScores: calculateNewTotalScores(
+            questionaire.totalScores,
+            document.scores
+          ),
+        };
+      } else {
+        updatedDoc = {
+          questionaire_id: document.questionaire_id,
+          numOfAnswers: 1,
+          totalScores: document.scores,
+        };
+      }
+
+      await client
+        .db("moral_agreements")
+        .collection("answers2")
+        .updateOne(
+          { questionaire_id: updatedDoc.questionaire_id },
+          {
+            $set: {
+              totalScores: updatedDoc.totalScores,
+              numOfAnswers: updatedDoc.numOfAnswers,
+            },
+          },
+          { upsert: true }
+        );
+      res.send(updatedDoc);
+    }
+  } catch (error) {
+    console.log(error);
   }
 });
